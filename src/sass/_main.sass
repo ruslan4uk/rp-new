@@ -17,6 +17,10 @@
     background: $white
     &__wrap
         position: relative
+    &__order-btn
+        position: absolute
+        right: 0
+        top: 0
 
 /* navigation */
 .navigation
@@ -53,9 +57,6 @@
 
 /* social */
 .social
-    position: absolute
-    top: 0
-    right: 0
     &__link
         display: inline-block
         padding-left: 1rem
@@ -244,3 +245,42 @@
     background: #fafafa  
     &__form
         margin-top: 4rem          
+
+
+/* footer */
+.footer
+    padding: 6rem
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__company-name
+        font-size: 2rem
+        font-family: 'Proxima-Nova-ExtraBold'
+    &__company-description
+        font-family: 'Proxima-Nova-Regular'
+        padding-top: 0.75rem
+    &__navigation
+        display: flex
+        flex-wrap: wrap
+    &__navigation-item
+        width: 50%
+        padding-left: 0.5rem
+        padding-top: 0.5rem
+    &__navigation-link
+        position: relative
+        &::after
+            content: ' '
+            position: absolute
+            left: 0
+            bottom: -2px
+            width: 0
+            height: 2px 
+            background: $green
+            +tr(width ease 0.25s)
+        &:hover::after
+            width: 100%
+
+    &__right
+        display: flex
+        align-items: flex-end
