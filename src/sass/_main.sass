@@ -1,0 +1,246 @@
+/* logo */
+.logo
+    padding: 0 0.5rem 0.5rem 0.5rem
+    background: $white
+    border-radius: 5px
+    position: absolute
+    top: -1.375rem
+
+/* top */
+.top
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9
+    width: 100%
+    padding: 2rem 0
+    background: $white
+    &__wrap
+        position: relative
+
+/* navigation */
+.navigation
+    display: flex
+    justify-content: center
+    &__items
+        display: flex
+    &__item
+        padding: 0 1rem
+    &__link
+        font-size: 0.938rem
+        font-family: 'Proxima-Nova-Regular'
+        color: $black
+        text-decoration: none  
+        text-transform: uppercase
+        position: relative
+        white-space: nowrap
+        +tr(color ease 0.25s)
+        &:hover
+            color: $green  
+        &::after
+            content: ' '
+            position: absolute
+            bottom: -5px
+            left: 0
+            height: 2px
+            background: $green
+            width: 0
+            +tr(width ease 0.25s)
+        &:hover::after
+            width: 100%
+    &__item.active &__link::after
+        width: 100%    
+
+/* social */
+.social
+    position: absolute
+    top: 0
+    right: 0
+    &__link
+        display: inline-block
+        padding-left: 1rem
+        +tr(transform ease 0.3s)
+        &:hover
+            transform: scale(1.2)
+    &__img
+        fill: $black
+        width: 1.5rem
+        height: 1.5rem     
+        +tr(fill ease 0.25s)
+    &__link:hover &__img
+        fill: $green   
+    
+    
+/* top-slider */
+.top-slider
+    width: 100%
+    background: url(../img/top-slider-bg.jpg) center bottom no-repeat fixed
+    background-position: cover
+    &__wrap
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+        justify-content: center
+        height: 100vh
+    &__title
+        font-family: 'Proxima-Nova-ExtraBold'
+        font-size: 3.750rem
+        text-align: center
+        color: #ffffff
+        text-transform: uppercase
+        margin-bottom: 2rem
+    &__subtitle
+        font-size: 2.250rem
+        color: $white
+    &__more
+        position: absolute
+        bottom: 3rem
+        animation: bounce 0.5s cubic-bezier(.5,0.05,1,.5)
+        animation-direction: alternate
+        animation-iteration-count: infinite
+    &__more-link
+        display: inline-block
+    &__more-svg
+        width: 2.5rem
+        height: 2.5rem
+        fill: $white
+
+/* services */
+.services
+    padding: 6rem 0        
+    &__items
+        display: flex
+        flex-wrap: wrap
+        align-content: left
+        justify-content: space-between
+        margin-top: 4rem
+        margin-bottom: 3rem
+    &__item
+        width: 100%
+        position: relative
+        overflow: hidden
+        margin-top: 1.5rem
+        &--small
+            width: calc(50% - 0.75rem)
+    &__link
+        position: relative
+        z-index: 2
+        padding: 2rem
+        display: flex
+        align-items: flex-end
+        justify-content: flex-start
+        height: 21rem
+    &__text
+        max-width: 20rem
+        +tr(transform ease 0.25s)
+    &__title
+        font-size: 2.250rem
+        color: $white
+        font-family: 'Proxima-Nova-Regular' 
+        margin-bottom: 1rem
+    &__subtitle
+        font-size: 1.125rem
+        color: $white 
+        line-height: 1.4   
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-image: url(../img/top-slider-bg.jpg)
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        +tr(transform ease 0.4s)
+        &--gazon
+            background-image: url(../img/gazon.jpg)
+        &--poliv
+            background-image: url(../img/poliv.jpg)
+    &__more
+        position: absolute
+        bottom: -3rem
+        left: 0
+        width: 100%
+        color: $white
+        background: $green
+        padding: 0.75rem 2rem
+        display: flex
+        align-items: center
+        +tr(transform ease 0.3s)
+    &__icon
+        width: 1.5rem
+        height: 1.5rem
+        margin-right: 1rem
+        fill: $white
+    &__item:hover &__bg
+        transform: translateY(-20px)
+    &__item:hover &__more
+        transform: translateY(-3rem)
+    &__item:hover &__text
+        transform: translateY(-2.5rem)
+        
+            
+/* about */
+.about
+    padding: 6rem 0 
+    background: #fafafa
+    &__items
+        margin-top: 2rem
+        display: flex
+        flex-wrap: wrap
+    &__item
+        width: 25%
+        padding: 0 1rem 
+        text-align: center
+        margin-top: 4rem
+    &__number
+        font-size: 3rem
+    &__descr
+        font-size: 1.25rem
+        margin-top: 2rem
+
+/* work */
+.work
+    padding: 6rem 0
+    &__items
+        margin-top: 4rem 
+        margin-bottom: 2rem  
+    &__item
+        position: relative
+        overflow: hidden
+        display: block
+    &__item:hover &__img
+        transform: scale(1.05)
+    &__img
+        +tr(transform ease 0.4s)
+    &__overlay
+        position: absolute  
+        bottom: 0
+        left: 0
+        width: 100% 
+        padding: 2rem     
+    &__title  
+        color: $white
+        font-size: 1.5rem
+        display: inline-block
+        position: relative
+        &::after
+            content: ' '
+            position: absolute
+            bottom: -5px
+            left: 0
+            width: 0
+            height: 2px
+            background: $green
+            +tr(width ease 0.25s)
+    &__item:hover &__title::after
+            width: 100%
+
+/* callback */
+.callback
+    padding: 6rem 0
+    background: #fafafa  
+    &__form
+        margin-top: 4rem          

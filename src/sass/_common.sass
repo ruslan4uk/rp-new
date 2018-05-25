@@ -1,0 +1,136 @@
+@font-face 
+    font-family: 'Proxima-Nova-Thin'
+    src: url('../fonts/ProximaNovaT-Thin.eot')
+    src: url('../fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNovaT-Thin.woff') format('woff'),
+    url('../fonts/ProximaNovaT-Thin.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'Proxima-Nova-Light'
+    src: url('../fonts/ProximaNova-Light.eot')
+    src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Light.woff') format('woff'),
+    url('../fonts/ProximaNova-Light.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'Proxima-Nova-Regular'
+    src: url('../fonts/ProximaNova-Regular.eot')
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'Proxima-Nova-ExtraBold'
+    src: url('../fonts/ProximaNova-Extrabld.eot')
+    src: url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+    url('../fonts/ProximaNova-Extrabld.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+/* Variable */
+$black: #373737
+$white: #ffffff
+$gray: #fafafa
+$green: #009846  
+
+html,body 
+    font-size: 16px
+* 
+    font-family: 'Proxima-Nova-Thin'
+    color: $black
+    line-height: 1.2
+
+a, a img 
+    border: none
+    text-decoration: none  
+    color: $black  
+
+.container
+    width: 100%
+    max-width: 1170px
+    margin: 0 auto    
+    padding-left: 20px
+    padding-right: 20px
+
+.title
+    font-size: 2.250rem
+    color: $black
+    text-align: center
+.subtitle
+    font-size: 1.125rem
+    color: $black    
+    text-align: center
+    max-width: 50rem
+    font-size: 1.25rem
+    line-height: 1.6
+    margin: 2rem auto 0
+
+.link
+    color: $green
+    &--more 
+        font-family: 'Proxima-Nova-Regular'
+        font-size: 1.125rem
+        display: flex
+        line-height: 1.5
+    &--more:hover > &__svg
+            transform: rotate(90deg)
+            fill: $black
+    &--center 
+        justify-content: center
+    &__svg
+        width: 1.5rem
+        height: 1.5rem
+        fill: $green
+        margin-right: 1rem
+        +tr(transform ease 0.25s)
+
+/* form */
+.form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__control
+        margin-top: 1.5rem
+        width: 100%
+        &--3col 
+            width: calc(33.33333% - 1rem)
+    &__input
+        padding: 1rem 1.5rem
+        font-size: 1rem     
+        border: 1px solid #eeeeee
+        width: 100%
+        +tr(all ease 0.3s)  
+        &:focus
+            border: 1px solid $green
+    &__textarea
+        &__input
+        padding: 1rem 1.5rem
+        font-size: 1rem     
+        border: 1px solid #eeeeee
+        width: 100%  
+        +tr(all ease 0.3s) 
+        &:focus
+            border: 1px solid $green
+    &__submit
+        padding: 0.938rem 2.5rem
+        color: $white
+        background: $green 
+        font-size: 1rem   
+        border: 1px solid $green
+        +tr(all ease 0.3s)
+        &:hover
+            background: transparent 
+            color: $green
+        
+
+
+/* animation */
+@keyframes bounce 
+    from 
+        transform: translate3d(0, 0, 0)
+    to 
+        transform: translate3d(0, 15px, 0)
