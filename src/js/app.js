@@ -2,6 +2,7 @@ import spincrement from './lib/spincrement.js';
 import $ from 'jquery';
 import 'owl.carousel';
 
+/* count digits animation */
 $(document).ready(function() {
   let show = true;
   let countbox = '.about';
@@ -28,10 +29,12 @@ $(document).ready(function() {
   });
 });
 
+/* carousel owl */
 $('.owl-carousel').owlCarousel({
   loop: true,
   margin: 20,
   responsiveClass: true,
+  navText: ["<svg class='work__arr work__arr--left'><use xlink:href='img/sprite.svg#icon-chevrone'></use></svg>", "<svg class='work__arr work__arr--right'><use xlink:href='img/sprite.svg#icon-chevrone'></use></svg>"],
   responsive: {
     0: {
       items: 1,

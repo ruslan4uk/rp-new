@@ -35,7 +35,12 @@
 $black: #373737
 $white: #ffffff
 $gray: #fafafa
-$green: #009846  
+$green: #009846 
+
+$sm: 576
+$md: 768
+$lg: 992
+$xl: 1200 
 
 html,body 
     font-size: 16px
@@ -48,6 +53,9 @@ a, a img
     border: none
     text-decoration: none  
     color: $black  
+
+img
+    max-width: 100%
 
 .container
     width: 100%
@@ -108,7 +116,9 @@ a, a img
         margin-top: 1.5rem
         width: 100%
         &--3col 
-            width: calc(33.33333% - 1rem)
+            width: 100%
+            +rmin($md)
+                width: calc(33.33333% - 1rem)
     &__input
         padding: 1rem 1.5rem
         font-size: 1rem     
@@ -137,7 +147,22 @@ a, a img
             background: transparent 
             color: $green
         
-
+/* burger top */
+.burger
+    width: 2rem
+    height: 2rem
+    position: absolute
+    top: -1rem
+    right: 0
+    +rmin($lg)
+        display: none
+    &__link
+        display: block
+    &__link span 
+            height: 3px
+            background: #333333
+            margin: 5px 0
+            display: block
 
 /* animation */
 @keyframes bounce 

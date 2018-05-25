@@ -5,6 +5,12 @@
     border-radius: 5px
     position: absolute
     top: -1.375rem
+    &__link
+        max-width: 10rem
+        display: block
+        +rmin($md)
+            max-width: 100%
+
 
 /* top */
 .top
@@ -18,14 +24,21 @@
     &__wrap
         position: relative
     &__order-btn
+        display: none
         position: absolute
         right: 0
-        top: 0
+        top: -0.5rem
+        +rmin($xl)
+            display: flex
 
 /* navigation */
 .navigation
-    display: flex
-    justify-content: center
+    display: none
+    justify-content: flex-end
+    +rmin($lg)
+        display: flex
+    +rmin($xl)
+        justify-content: center
     &__items
         display: flex
     &__item
@@ -75,7 +88,7 @@
 /* top-slider */
 .top-slider
     width: 100%
-    background: url(../img/top-slider-bg.jpg) center bottom no-repeat fixed
+    background: url(../img/top-slider-bg.jpg) center center no-repeat fixed
     background-position: cover
     &__wrap
         position: relative
@@ -87,13 +100,16 @@
     &__title
         font-family: 'Proxima-Nova-ExtraBold'
         font-size: 3.750rem
-        text-align: center
+        text-align: left
         color: #ffffff
         text-transform: uppercase
         margin-bottom: 2rem
+        +rmin($sm)
+            text-align: center
     &__subtitle
-        font-size: 2.250rem
+        font-size: 2.125rem
         color: $white
+        font-family: 'Proxima-Nova-Regular'
     &__more
         position: absolute
         bottom: 3rem
@@ -123,15 +139,19 @@
         overflow: hidden
         margin-top: 1.5rem
         &--small
-            width: calc(50% - 0.75rem)
+            +rmin($md)
+                width: calc(50% - 0.75rem)
     &__link
         position: relative
         z-index: 2
-        padding: 2rem
+        padding: 1rem
         display: flex
         align-items: flex-end
         justify-content: flex-start
-        height: 21rem
+        height: 18rem
+        +rmin($sm)
+            padding: 2rem
+            height: 21rem
     &__text
         max-width: 20rem
         +tr(transform ease 0.25s)
@@ -188,19 +208,28 @@
     padding: 6rem 0 
     background: #fafafa
     &__items
-        margin-top: 2rem
+        margin-top: 0
         display: flex
         flex-wrap: wrap
+        +rmin($sm)
+            margin-top: 2rem
     &__item
-        width: 25%
+        width: 100%
         padding: 0 1rem 
         text-align: center
-        margin-top: 4rem
+        margin-top: 2rem
+        +rmin($sm)
+            width: 50%      
+            margin-top: 4rem
+        +rmin($lg)
+            width: 25%
     &__number
         font-size: 3rem
     &__descr
         font-size: 1.25rem
-        margin-top: 2rem
+        margin-top: 0
+        +rmin($sm)
+            margin-top: 2rem
 
 /* work */
 .work
@@ -238,6 +267,26 @@
             +tr(width ease 0.25s)
     &__item:hover &__title::after
             width: 100%
+    
+    /* owl carousel slide control */
+    & .owl-prev, & .owl-next
+        position: absolute
+        top: 0
+        width: 3rem
+        height: calc(100% - 1.25rem)
+        background: none
+        right: 0
+        opacity: 0
+        +tr(all ease 0.35s)
+    &__items:hover .owl-prev, &__items:hover .owl-next
+            opacity: 0.75
+    & .owl-prev
+        left: 0
+        transform: rotate(180deg)
+    &__arr
+        width: 100%
+        fill: #ffffff
+
 
 /* callback */
 .callback
@@ -249,7 +298,7 @@
 
 /* footer */
 .footer
-    padding: 6rem
+    padding: 3rem
     &__wrap
         display: flex
         flex-wrap: wrap
@@ -284,3 +333,18 @@
     &__right
         display: flex
         align-items: flex-end
+
+/* copyright */
+.copyright
+    padding: 1rem
+    border-top: 1px solid #eeeeee
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__link
+        color: $green
+        border-bottom: 1px solid transparent
+        +tr(all ease 0.25s)
+        &:hover
+            border-bottom: 1px solid $green
