@@ -76,6 +76,12 @@
         +tr(transform ease 0.3s)
         &:hover
             transform: scale(1.2)
+        &--footer
+            padding-left: 0
+            padding-right: 1rem
+            +rmin($md)
+                padding-left: 1rem
+                padding-right: 0
     &__img
         fill: $black
         width: 1.5rem
@@ -89,7 +95,7 @@
 .top-slider
     width: 100%
     background: url(../img/top-slider-bg.jpg) center center no-repeat fixed
-    background-position: cover
+    background-size: cover
     &__wrap
         position: relative
         display: flex
@@ -298,7 +304,7 @@
 
 /* footer */
 .footer
-    padding: 3rem
+    padding: 3rem 0
     &__wrap
         display: flex
         flex-wrap: wrap
@@ -312,10 +318,18 @@
     &__navigation
         display: flex
         flex-wrap: wrap
+        width: 100%
+        margin-top: 1rem
+        max-width: 100%
+        +rmin($sm)
+            max-width: 15rem
     &__navigation-item
         width: 50%
-        padding-left: 0.5rem
+        padding-right: 0.5rem
         padding-top: 0.5rem
+        +rmin($md)
+            padding-left: 0.5rem
+            padding-right: 0
     &__navigation-link
         position: relative
         &::after
@@ -329,9 +343,12 @@
             +tr(width ease 0.25s)
         &:hover::after
             width: 100%
+    & .social 
+        margin-top: 1rem
 
     &__right
         display: flex
+        flex-wrap: wrap
         align-items: flex-end
 
 /* copyright */
