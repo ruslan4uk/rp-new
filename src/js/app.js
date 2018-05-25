@@ -1,6 +1,10 @@
 import spincrement from './lib/spincrement.js';
 import $ from 'jquery';
 import 'owl.carousel';
+import remodal from 'remodal';
+
+/* remodal window */
+$('[data-remodal-id=modal]').remodal();
 
 /* count digits animation */
 $(document).ready(function() {

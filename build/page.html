@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+    <link rel="stylesheet" media="all" href="css/app.css?v=1.0.0"> </head>
   <body>
     <!-- BEGIN content -->
     <div class="out">
@@ -42,7 +44,7 @@
               </ul>
             </div>
             <div class="top__order-btn">
-              <a href="#" class="btn btn--small">Получить консультацию</a>
+              <a href="#" class="btn btn--small" data-remodal-target="modal">Получить консультацию</a>
             </div>
             <div class="burger">
               <a href="" class="burger__link">
@@ -271,10 +273,30 @@
           </div>
         </div>
       </section>
+      <div class="remodal" data-remodal-id="modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <div class="title">Расскажите о своем проекте</div>
+        <div class="subtitle">Наш специалист с Вами свяжется в ближайшее время</div>
+        <form action="" class="form">
+          <div class="form__control form__control--3col">
+            <input type="text" class="form__input" placeholder="Ваше имя" required> </div>
+          <div class="form__control form__control--3col">
+            <input type="text" class="form__input" placeholder="Ваш телефон" required> </div>
+          <div class="form__control form__control--3col">
+            <input type="text" class="form__input" placeholder="Ваш Email" required> </div>
+          <div class="form__control">
+            <input type="text" class="form__input" placeholder="Где находится объект" required> </div>
+          <div class="form__control">
+            <textarea class="form__textarea" rows="7" placeholder="Ваше сообщение" required></textarea>
+          </div>
+          <div class="form__control">
+            <input type="submit" class="form__submit" value="Отправить"> </div>
+        </form>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js?v=1.0.0"></script>
     <!-- END scripts -->
   </body>
 </html>
