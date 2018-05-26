@@ -3,6 +3,17 @@ import $ from 'jquery';
 import 'owl.carousel';
 import remodal from 'remodal';
 
+/* add and remove class head to scroll top */
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 80) {
+    $('.top').addClass('top--fix');
+  } else {
+    $('.top').removeClass('top--fix');
+  }
+});
+
 /* remodal window */
 $('[data-remodal-id=modal]').remodal();
 

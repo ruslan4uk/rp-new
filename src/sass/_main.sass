@@ -1,15 +1,10 @@
 /* logo */
 .logo
-    padding: 0 0.5rem 0.5rem 0.5rem
-    background: $white
-    border-radius: 5px
-    position: absolute
-    top: -1.375rem
+    width: 10rem
     &__link
-        max-width: 10rem
+        width: 9rem
         display: block
-        +rmin($md)
-            max-width: 100%
+        +tr(width ease 0.2s)
 
 
 /* top */
@@ -19,17 +14,26 @@
     left: 0
     z-index: 9
     width: 100%
-    padding: 2rem 0
+    padding: 0.75rem 0
     background: $white
     &__wrap
         position: relative
-    &__order-btn
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__right
         display: none
-        position: absolute
-        right: 0
-        top: -0.5rem
+        text-align: right
         +rmin($xl)
-            display: flex
+            display: block
+    &__phone
+        font-family: 'Proxima-Nova-Regular'
+        margin-bottom: 0.5rem
+        display: block
+    &--fix 
+        box-shadow: 0 0 10px 2px rgba(0,0,0,.15)
+    &--fix .logo__link
+        width: 7rem
 
 /* navigation */
 .navigation
@@ -44,7 +48,7 @@
     &__item
         padding: 0 1rem
     &__link
-        font-size: 0.938rem
+        font-size: 0.875rem
         font-family: 'Proxima-Nova-Regular'
         color: $black
         text-decoration: none  

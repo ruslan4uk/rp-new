@@ -87,7 +87,11 @@ img
     background: $green 
     font-size: 1rem   
     border: 1px solid $green
+    display: inline-block
     +tr(all ease 0.3s)
+    &--small
+        padding: 0.5rem 1rem
+        font-size: 0.875rem
     &:hover
         background: transparent 
         color: $green
@@ -141,7 +145,7 @@ img
         &:focus
             border: 1px solid $green
     &__submit
-        padding: 0.938rem 2.5rem
+        padding: 0.75rem 2.5rem
         color: $white
         background: $green 
         font-size: 1rem   
@@ -153,11 +157,8 @@ img
         
 /* burger top */
 .burger
-    width: 2rem
+    width: 1.75rem
     height: 2rem
-    position: absolute
-    top: -1rem
-    right: 0
     +rmin($lg)
         display: none
     &__link
