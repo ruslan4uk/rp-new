@@ -48,7 +48,8 @@ html,body
     font-family: 'Proxima-Nova-Thin'
     color: $black
     line-height: 1.2
-
+body 
+    background: url(../img/lines.png) repeat
 a, a img 
     border: none
     text-decoration: none  
@@ -189,6 +190,21 @@ img
             background: #333333
             margin: 5px 0
             display: block
+
+.accordion
+    max-width: 50rem
+    margin: 0 auto
+    &__btn
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        &-text 
+            font-size: 1.25rem
+        &-icon 
+            width: 1.25rem
+            height: 1.25rem
+            fill: $green
+
 
 /* animation */
 @keyframes bounce 
