@@ -115,6 +115,27 @@ img
         margin-right: 1rem
         +tr(transform ease 0.25s)
 
+/* breadcrumbs */
+.breadcrumbs
+    padding: 1rem 0
+    &__items
+        display: flex
+        justify-content: center
+    &__item
+        font-size: 0.875rem
+        margin-right: 1rem
+        &::after
+            content: '>'
+            margin-left: 0.5rem
+        &:last-child
+            margin-right: 0
+        &:last-child::after
+            content: ' '
+            margin-left: 0
+    &__link
+        font-size: 0.875rem
+        color: $green
+
 /* form */
 .form
     display: flex

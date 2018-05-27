@@ -306,6 +306,43 @@
     &__form
         margin-top: 3rem          
 
+/* page-header */
+.page-header
+    padding-top: 8rem
+    padding-bottom: 1rem
+    background: #fafafa
+    text-align: center
+    
+/* page-contact */
+.page-contact
+    padding: 4rem 0
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-content: flex-start
+    &__left
+        width: 100%
+        margin-bottom: 3rem
+        +rmin($md)
+            width: 45%
+            margin-bottom: 0
+    &__right
+        width: 100%
+        +rmin($md)
+            width: 55%
+    &__item
+        display: flex
+        align-items: center
+        margin-bottom: 2rem
+    &__icon
+        width: 2.5rem
+        height: 2.5rem
+        fill: $green
+        margin-right: 1.5rem
+    &__text p
+        font-size: 1.125rem
+        line-height: 1.5
 
 /* footer */
 .footer
