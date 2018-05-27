@@ -1,7 +1,18 @@
-import spincrement from './lib/spincrement.js';
 import $ from 'jquery';
+import spincrement from './lib/spincrement.js';
 import 'owl.carousel';
 import remodal from 'remodal';
+
+/* js accordion */
+$('.js-accordion .accordion__btn').click(function() {
+  let item = $(this).parent();
+
+  if(item.hasClass('is-opened')) {
+    item.removeClass('is-opened');
+  } else {
+    item.addClass('is-opened');
+  }
+});
 
 /* scroll to anchor */
 $(function() {
@@ -39,23 +50,25 @@ $(document).ready(function() {
   let countbox = '.about';
   $(window).on('scroll load resize', function() {
 
-    if (!show) return false;
+    if($(countbox).length > 0) {
+      if (!show) return false;
 
-    let w_top = $(window).scrollTop();
-    let e_top = $(countbox).offset().top;
+      let wTop = $(window).scrollTop();
+      let eTop = $(countbox).offset().top;
 
-    let w_height = $(window).height();
-    let d_height = $(document).height();
+      let wHeight = $(window).height();
+      let dHeight = $(document).height();
 
-    let e_height = $(countbox).outerHeight();
+      let eHeight = $(countbox).outerHeight();
 
-    if (w_top + 600 >= e_top || w_height + w_top === d_height || e_height + e_top < w_height) {
-      $('.about__number').spincrement({
-        thousandSeparator: '',
-        duration: 2500
-      });
+      if (wTop + 600 >= eTop || wHeight + wTop === dHeight || eHeight + eTop < wHeight) {
+        $('.about__number').spincrement({
+          thousandSeparator: '',
+          duration: 2500
+        });
 
-      show = false;
+        show = false;
+      }
     }
   });
 });
