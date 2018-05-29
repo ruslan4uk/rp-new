@@ -107,7 +107,7 @@
         flex-wrap: wrap
         align-content: center
         justify-content: center
-        height: 100vh
+        min-height: 100vh
     &__title
         font-family: 'Proxima-Nova-ExtraBold'
         font-size: 3.750rem
@@ -136,13 +136,13 @@
 
 /* services */
 .services
-    padding: 6rem 0        
+    padding: 5rem 0        
     &__items
         display: flex
         flex-wrap: wrap
         align-content: left
         justify-content: space-between
-        margin-top: 3rem
+        margin-top: 1.5rem
         margin-bottom: 3rem
     &__item
         width: 100%
@@ -152,6 +152,18 @@
         &--small
             +rmin($md)
                 width: calc(50% - 0.75rem)
+    &__hide
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: -3rem
+        margin-bottom: 3rem
+        overflow: hidden
+        max-height: 0
+        +tr(max-height ease-in-out 0.75s)
+        &.is-opened
+            max-height: 100rem
     &__link
         position: relative
         z-index: 2
@@ -216,14 +228,11 @@
             
 /* about */
 .about
-    padding: 6rem 0 
+    padding: 5rem 0 
     background: #fafafa
     &__items
-        margin-top: 0
         display: flex
         flex-wrap: wrap
-        +rmin($sm)
-            margin-top: 2rem
     &__item
         width: 100%
         padding: 0 1rem 
@@ -244,14 +253,24 @@
 
 /* work */
 .work
-    padding: 6rem 0
+    padding: 5rem 0
+    &--portfolio
+        padding: 0
     &__items
         margin-top: 3rem 
         margin-bottom: 2rem  
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
     &__item
         position: relative
         overflow: hidden
         display: block
+        &--portfolio
+            width: 100% 
+            margin-bottom: 2rem
+            +rmin($md)
+                width: calc(50% - 1rem)
     &__item:hover &__img
         transform: scale(1.05)
     &__img
@@ -301,7 +320,7 @@
 
 /* callback */
 .callback
-    padding: 6rem 0
+    padding: 5rem 0
     background: #fafafa  
     &__form
         margin-top: 3rem          
@@ -348,7 +367,27 @@
 .page
     padding: 3rem 0
     
-
+/* portfolio page */
+.portfolio
+    padding: 3rem 0
+    &__title
+        font-size: 1.5rem
+        margin-bottom: 0.75rem
+    &__header
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &-col
+            width: 31%
+    &__content
+        padding: 2rem 0
+        margin: 2rem 0
+        border-top: 1px solid #eeeeee
+        & img 
+            width: 100%
+            margin-bottom: 2rem
+        & p 
+            margin-bottom: 2rem
 
 /* footer */
 .footer

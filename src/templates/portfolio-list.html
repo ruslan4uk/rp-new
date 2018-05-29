@@ -1,0 +1,72 @@
+---
+title: Портфолио - Русский пейзаж
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_top.html" %}
+
+	<section class="page-header">
+        <div class="container">
+            <div class="page-header__wrap">
+                <div class="title">Наши работы</div>
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__items">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">Наши работы</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work work--portfolio">
+                    <div class="container">
+                        <div class="work__wrap work__wrap--portfolio">
+                            <div class="work__items">
+                            
+                                <a href="" class="work__item work__item--portfolio">
+                                    <div class="work__img">
+                                        <img src="img/work.jpg" alt="" />
+                                    </div>  
+                                    <div class="work__overlay">
+                                        <p class="work__title">Коттеджный поселок</p>
+                                    </div>
+                                </a>
+                                <a href="" class="work__item work__item--portfolio">
+                                    <div class="work__img">
+                                        <img src="img/work.jpg" alt="" />
+                                    </div>  
+                                    <div class="work__overlay">
+                                        <p class="work__title">Коттеджный поселок</p>
+                                    </div>
+                                </a>
+                                <a href="" class="work__item work__item--portfolio">
+                                    <div class="work__img">
+                                        <img src="img/work.jpg" alt="" />
+                                    </div>  
+                                    <div class="work__overlay">
+                                        <p class="work__title">Коттеджный поселок</p>
+                                    </div>
+                                </a>
+                                <a href="" class="work__item work__item--portfolio">
+                                    <div class="work__img">
+                                        <img src="img/work.jpg" alt="" />
+                                    </div>  
+                                    <div class="work__overlay">
+                                        <p class="work__title">Коттеджный поселок</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+    {% include "partials/_callback.html" %}
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

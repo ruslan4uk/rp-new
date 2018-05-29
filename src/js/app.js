@@ -3,6 +3,18 @@ import spincrement from './lib/spincrement.js';
 import 'owl.carousel';
 import remodal from 'remodal';
 
+/* open services */
+$('.js--open-services').on('click', function(e) {
+  let services = $('.services__hide');
+
+  if(services.hasClass('is-opened')) {
+    services.removeClass('is-opened');
+  } else {
+    services.addClass('is-opened');
+  }
+  return false;
+});
+
 /* js accordion */
 $('.js-accordion .accordion__btn').click(function() {
   let item = $(this).parent();

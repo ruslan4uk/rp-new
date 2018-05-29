@@ -3,3 +3,11 @@ ProjectTitle: russpeizazh
 PageList:
 - file: page.html
   ready: 50
+- file: price.html
+  ready: 50
+- file: portfolio-list.html
+  ready: 50
+- file: portfolio.html
+  ready: 50
+- file: contact.html
+  ready: 50
