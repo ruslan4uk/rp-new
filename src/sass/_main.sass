@@ -378,10 +378,13 @@
         flex-wrap: wrap
         justify-content: space-between
         &-col
-            width: 31%
+            width: 100%
+            margin-bottom: 2rem
+            +rmin($md)
+                width: 31%
     &__content
         padding: 2rem 0
-        margin: 2rem 0
+        margin: 0 0 2rem
         border-top: 1px solid #eeeeee
         & img 
             width: 100%
