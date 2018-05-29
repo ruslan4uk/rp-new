@@ -2,6 +2,37 @@ import $ from 'jquery';
 import spincrement from './lib/spincrement.js';
 import 'owl.carousel';
 import remodal from 'remodal';
+import WOW from './lib/wowjs.js';
+
+/* mobile navugation */
+let burger    = $('.js--mobile-navigation-burger'),
+  menu      = $('.js--mobile-navigation'),
+  closeBtn  = $('.js--mobile-navigation-close');
+burger.on('click', function() {
+  menu.addClass('is-opened');
+  return false;
+});
+closeBtn.on('click', function() {
+  menu.removeClass('is-opened');
+  return false;
+});
+
+/* wowjs */
+var wow = new WOW(
+  {
+    boxClass:     'wow', // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0, // distance to the element when triggering the animation (default is 0)
+    mobile:       true, // trigger animations on mobile devices (default is true)
+    live:         true, // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
 
 /* open services */
 $('.js--open-services').on('click', function(e) {
